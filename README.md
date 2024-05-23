@@ -4,6 +4,7 @@
 - Make a very basic mod that basically does nothing
 - Remove research tree
 - Remove enemy factions
+- Add a preview .PNG (https://rimworldwiki.com/wiki/Modding_Tutorials/Getting_started_with_mods)
 
 # Feature Backlog
 - Make a super basic
