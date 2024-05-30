@@ -1,1 +1,1 @@
-Robocopy .\res\RuneQuest\ G:\steam\steamapps\common\RimWorld\Mods /MIR
+Robocopy .\res\RuneQuest\ G:\steam\steamapps\common\RimWorld\Mods\RuneQuest /MIR
