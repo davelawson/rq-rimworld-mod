@@ -1,21 +1,80 @@
 # rq-rimworld-mod
+An ambitious RimWorld mod that converts the game world into something resembling RuneQuest's Glorantha.
+Initially
 
 # TODO
-- Make a very basic mod that basically does nothing
-- Remove research tree
-- Remove enemy factions
-
-# Feature Backlog
-- Make a super basic
-- Disable basic research
-- New tech tree (iron working, reading/writing, weaving, etc.)
-- Cults Galore
-- Pantheons (Grouping multiple cults together into a cohesive whole)
-- Random events
-- Tons of rituals
-- Spirit Magic
-- Divine Magic
-- Heroquesting (maybe this replaces research?)
-- Rune affinities for pawns
-- Elections
-- Create new enemy factions
+- [ ] publish to workshop
+  - [ ] materials
+    - [ ] metals
+      - [ ] copper
+      - [ ] tin
+      - [ ] bronze
+      - [ ] iron
+      - [ ] aluminum
+      - [ ] enchanted iron
+      - [ ] river metal
+      - [ ] silver
+      - [ ] gold
+      - [ ] lead
+- [ ] things
+  - [ ] buildings
+    - [ ] make a simple woodworker's station
+  - [ ] weapons
+    - [ ] dagger
+    - [ ] short sword
+    - [ ] broad sword
+    - [ ] great sword
+    - [ ] hatchet
+    - [ ] battle axe
+    - [ ] great axe
+    - [ ] pole axe
+    - [ ] short spear
+    - [ ] long spear
+    - [ ] pike
+    - [ ] self bow
+    - [ ] composite bow
+    - [ ] javelin
+    - [ ] club
+    - [ ] mace
+    - [ ] great maul
+  - [ ] apparel
+    - [ ] make a simple test fake beard
+  - [ ] coins
+    - [ ] make a simple test copper clack
+- [ ] research
+    - [ ] disable default research tree
+    - [ ] heroquesting
+- [ ] ideologies
+    - [ ] cults
+        - [ ] rune magic
+- [ ] species
+  - [ ] human
+  - [ ] hsunchen
+  - [ ] broo
+  - [ ] agamori
+  - [ ] newtling
+  - [ ] ducks
+  - [ ] ghouls
+  - [ ] ogres
+  - [ ] vampires
+- [ ] factions
+  - [ ] Sartar
+  - [ ] Lunar
+  - [ ] Tarsh
+  - [ ] Prax
+  - [ ] Telmori
+  - [ ] Beastmen
+  - [ ] Sun Domer
+  - [ ] Trolls
+  - [ ] Esrolia
+- [ ] diplomacy
+  - [ ] trade
+  - [ ] feuds
+  - [ ] tribes
+  - [ ] debts / favours
+  - [ ] nations
+- [ ] events
+- [ ] pawns
+    - [ ] rune affinities
+- [ ] psycasting
+    - [ ] spirit magic

@@ -1,0 +1,1 @@
+Robocopy .\res\RuneQuest\ G:\steam\steamapps\common\RimWorld\Mods\RuneQuest /MIR

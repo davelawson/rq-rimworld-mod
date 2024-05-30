@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef>
+        <defName>RuneQuest_TestResource</defName>
+        <label>TestResource</label>
+        <description>A test resource item</description>
+        <category>Item</category>
+        <graphicData>
+            <texPath>Things/Item/Resource</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stackLimit>100</stackLimit>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <thingClass>Thing</thingClass>
+        <statBases>
+            <MarketValue>10</MarketValue>
+        </statBases>
+    </ThingDef>
+</Defs>

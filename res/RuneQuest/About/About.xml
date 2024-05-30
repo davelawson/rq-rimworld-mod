@@ -1,0 +1,9 @@
+<ModMetaData>
+<name>RuneQuest</name>
+    <author>Barbar</author> 
+    <packageId>Barbar.RuneQuest</packageId>
+    <description>Overhaul that remakes the world into that of Glorantha</description>
+    <supportedVersions>
+     <li>1.5</li>
+    </supportedVersions>
+</ModMetaData>
