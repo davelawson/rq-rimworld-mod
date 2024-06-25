@@ -1,0 +1,40 @@
+<Defs>
+    <AbilityDef Name="PsycastBaseSkip" ParentName="PsycastBase" Abstract="True">
+        <category>Skip</category>
+    </AbilityDef>
+    <AbilityDef ParentName="PsycastBase">
+        <defName>RuneQuest_Mobility</defName>
+        <label>mobility</label>
+        <description>Enhance movement speed by 100% for a short time.</description>
+        <level>1</level>
+        <iconPath>UI/Abilities/Painblock</iconPath>
+        <hotKey>Misc1</hotKey>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_EntropyGain>0</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.02</Ability_PsyfocusCost>
+            <Ability_Duration>120</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <warmupTime>0.25</warmupTime>
+            <range>4.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>PsychicAnesthesia</hediffDef>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>
