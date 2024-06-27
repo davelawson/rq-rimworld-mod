@@ -1,1 +1,6 @@
 .history
+.vs/*
+bin/*
+obj/*
+packages/*
+res/RuneQuest/Assemblies/*

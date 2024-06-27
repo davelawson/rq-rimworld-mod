@@ -1,40 +1,279 @@
 <Defs>
-    <AbilityDef Name="PsycastBaseSkip" ParentName="PsycastBase" Abstract="True">
-        <category>Skip</category>
-    </AbilityDef>
-    <AbilityDef ParentName="PsycastBase">
-        <defName>RuneQuest_Mobility</defName>
-        <label>mobility</label>
-        <description>Enhance movement speed by 100% for a short time.</description>
-        <level>1</level>
-        <iconPath>UI/Abilities/Painblock</iconPath>
-        <hotKey>Misc1</hotKey>
-        <hostile>false</hostile>
-        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-        <statBases>
-            <Ability_EntropyGain>0</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.02</Ability_PsyfocusCost>
-            <Ability_Duration>120</Ability_Duration>
-        </statBases>
-        <verbProperties>
-            <warmupTime>0.25</warmupTime>
-            <range>4.9</range>
-            <targetParams>
-                <canTargetSelf>True</canTargetSelf>
-                <canTargetAnimals>True</canTargetAnimals>
-            </targetParams>
-        </verbProperties>
-        <comps>
-            <li Class="CompProperties_AbilityGiveHediff">
-                <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>PsychicAnesthesia</hediffDef>
-                <durationMultiplier>PsychicSensitivity</durationMultiplier>
-                <psychic>True</psychic>
-                <applicableToMechs>False</applicableToMechs>
-            </li>
-            <li Class="CompProperties_AbilityFleckOnTarget">
-                <fleckDef>PsycastPsychicEffect</fleckDef>
-            </li>
-        </comps>
-    </AbilityDef>
+	<AbilityCategoryDef>
+		<defName>SpiritMagic</defName>
+		<displayOrder>5</displayOrder>
+	</AbilityCategoryDef>
+	<AbilityDef Name="RQ_SpiritMagic" ParentName="PsycastBase" Abstract="True">
+		<category>SpiritMagic</category>
+	</AbilityDef>
+
+	<HediffDef ParentName = "PsycastHediffBase">
+		<defName>RQ_Hediff_Mobility</defName>
+		<label>mobility</label>
+		<description>Make go fast.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>2.0</postFactor>
+					</li>
+				</capMods>
+				<capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName = "PsycastHediffBase">
+		<defName>RQ_Hediff_Shimmer</defName>
+		<label>shimmer</label>
+		<description>Looks fuzzy and out of focus.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>2.0</postFactor>
+					</li>
+				</capMods>
+				<capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName = "PsycastHediffBase">
+		<defName>RQ_Hediff_Parry</defName>
+		<label>parry</label>
+		<description>Fending off blows with unnatural precision and alacrity.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeDodgeChance>15</MeleeDodgeChance>
+				</statOffsets>
+				<capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName = "PsycastHediffBase">
+		<defName>RQ_Hediff_Bladesharp</defName>
+		<label>blade sharp</label>
+		<description>Blades cut incredibly easily in this pawn's hands.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<SharpDamageMultiplier>1.25</SharpDamageMultiplier>
+				</statOffsets>
+				<capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Mobility</defName>
+		<label>mobility</label>
+		<description>The caster moves unnaturally fast for a short time.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.05</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>0</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>RQ_Hediff_Mobility</hediffDef>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<psychic>True</psychic>
+				<applicableToMechs>False</applicableToMechs>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Shimmer</defName>
+		<label>shimmer</label>
+		<description>The caster becomes difficult to see clearly, and attackers have a more difficult time scoring hits for a short time.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.10</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>0</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>RQ_Hediff_Shimmer</hediffDef>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<psychic>True</psychic>
+				<applicableToMechs>False</applicableToMechs>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Parry</defName>
+		<label>parry</label>
+		<description>Bolsters the caster's ability to fend off incoming melee blows for a short time.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.10</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>0</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>RQ_Hediff_Parry</hediffDef>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<psychic>True</psychic>
+				<applicableToMechs>False</applicableToMechs>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Bladesharp</defName>
+		<label>bladesharp</label>
+		<description>Causes any bladed weapons in the caster's hands to cut deeper than they should for a short time.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.10</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>0</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>RQ_Hediff_Bladesharp</hediffDef>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<psychic>True</psychic>
+				<applicableToMechs>False</applicableToMechs>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Repair</defName>
+		<label>repair</label>
+		<description>Restores the condition of an item or structure, but reduces the quality.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.10</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>5</range>
+			<targetParams>
+				<onlyTargetDamagedThings>True</onlyTargetDamagedThings>
+				<canTargetPawns>False</canTargetPawns>
+				<canTargetItems>True</canTargetItems>
+				<canTargetBuildings>True</canTargetBuildings>
+				<mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Rq_CompProperties_AbilityRepair">
+				<compClass>Rq_CompAbilityEffect_Repair</compClass>
+				<psychic>True</psychic>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="RQ_SpiritMagic">
+		<defName>RQ_SM_Debug</defName>
+		<label>debug</label>
+		<description>Does some random shit for the sake of testing.</description>
+		<level>1</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EntropyGain>0</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.10</Ability_PsyfocusCost>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>0</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Rq_CompProperties_AbilityDebug">
+				<compClass>Rq_CompAbilityEffect_Debug</compClass>
+				<psychic>False</psychic>
+				<clamorType>Ability</clamorType>
+				<clamorRadius>10</clamorRadius>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>

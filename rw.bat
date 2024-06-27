@@ -1,0 +1,1 @@
+"G:\steam\steamapps\common\RimWorld\RimWorldWin64.exe" -quicktest
