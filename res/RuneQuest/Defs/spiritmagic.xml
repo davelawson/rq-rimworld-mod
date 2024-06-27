@@ -239,8 +239,8 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
-			<li Class="Rq_CompProperties_AbilityRepair">
-				<compClass>Rq_CompAbilityEffect_Repair</compClass>
+			<li Class="Rq.SpiritMagic.Rq_CompProperties_AbilityRepair">
+				<compClass>Rq.SpiritMagic.Rq_CompAbilityEffect_Repair</compClass>
 				<psychic>True</psychic>
 			</li>
 		</comps>
@@ -268,8 +268,8 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
-			<li Class="Rq_CompProperties_AbilityDebug">
-				<compClass>Rq_CompAbilityEffect_Debug</compClass>
+			<li Class="Rq.SpiritMagic.Rq_CompProperties_AbilityDebug">
+				<compClass>Rq.SpiritMagic.Rq_CompAbilityEffect_Debug</compClass>
 				<psychic>False</psychic>
 				<clamorType>Ability</clamorType>
 				<clamorRadius>10</clamorRadius>

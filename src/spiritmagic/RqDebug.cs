@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Rimworld
+namespace Rq.SpiritMagic
 {
     public class Rq_CompProperties_AbilityDebug : CompProperties_AbilityEffect
     {

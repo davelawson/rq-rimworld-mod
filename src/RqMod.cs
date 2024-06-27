@@ -3,7 +3,7 @@ using RimWorld;
 using System;
 using Verse;
 
-namespace RqLib
+namespace Rq
 {
     [StaticConstructorOnStartup]
     public static class RqMod

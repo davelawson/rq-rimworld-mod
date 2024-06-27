@@ -7,7 +7,7 @@
     <ProjectGuid>{8B98591F-0B82-4421-9017-71AACFE4D295}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RuneQuestLib</RootNamespace>
+    <RootNamespace>Rq</RootNamespace>
     <AssemblyName>RuneQuestLib</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,10 +52,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\RqDebug.cs" />
+    <Compile Include="src\SpiritMagic\RqDebug.cs" />
     <Compile Include="src\RqMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\spiritmagic\Repair.cs" />
+    <Compile Include="src\SpiritMagic\Repair.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Rimworld
+namespace Rq.spiritmagic
 {
     public class Rq_CompProperties_AbilityRepair : CompProperties_AbilityEffect
     {
